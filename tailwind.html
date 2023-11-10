@@ -3,12 +3,196 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="tailwind.css" rel="stylesheet" type="text/css" />
     <title>daisyUI</title>
   </head>
   <body>
-    <div class="btn">sup</div>
+    <!-- Accordion -->
+    <div class="join join-vertical w-full">
+      <div class="collapse collapse-plus join-item border border-base-300">
+        <input type="radio" name="my-accordion-4" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          Click to open this one and close others
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus join-item border border-base-300">
+        <input type="radio" name="my-accordion-4" />
+        <div class="collapse-title text-xl font-medium">
+          Click to open this one and close others
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus join-item border border-base-300">
+        <input type="radio" name="my-accordion-4" />
+        <div class="collapse-title text-xl font-medium">
+          Click to open this one and close others
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- We use cookies haha -->
+    <div class="alert">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        class="stroke-info shrink-0 w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        ></path>
+      </svg>
+      <span>we use cookies for no reason.</span>
+      <div>
+        <button class="btn btn-sm">Deny</button>
+        <button class="btn btn-sm btn-primary">Accept</button>
+      </div>
+    </div>
+
+    <!-- feet -->
+    <div class="chat chat-start">
+      <div class="chat-bubble chat-bubble-primary">
+        What kind of nonsense is this
+      </div>
+    </div>
+    <div class="chat chat-start">
+      <div class="chat-bubble chat-bubble-secondary">
+        Put me on the Council and not make me a Master!??
+      </div>
+    </div>
+    <div class="chat chat-start">
+      <div class="chat-bubble chat-bubble-accent">
+        That's never been done in the history of the Jedi. It's insulting!
+      </div>
+    </div>
+    <div class="chat chat-end">
+      <div class="chat-bubble chat-bubble-info">Calm down, Anakin.</div>
+    </div>
+    <div class="chat chat-end">
+      <div class="chat-bubble chat-bubble-success">
+        You have been given a great honor.
+      </div>
+    </div>
+    <div class="chat chat-end">
+      <div class="chat-bubble chat-bubble-warning">
+        To be on the Council at your age.
+      </div>
+    </div>
+    <div class="chat chat-end">
+      <div class="chat-bubble chat-bubble-error">
+        It's never happened before.
+      </div>
+    </div>
+
+    <!-- Mission Possible -->
+    <span class="loading loading-ring loading-lg"></span>
+
+    <!-- Not anymore -->
+    <input type="file" class="file-input file-input-bordered w-full max-w-xs" />
+
+    <!-- OOh -->
+    <input type="range" min="0" max="100" value="25" class="range" step="25" />
+    <div class="w-full flex justify-between text-xs px-2">
+      <span>|</span>
+      <span>|</span>
+      <span>|</span>
+      <span>|</span>
+      <span>|</span>
+    </div>
+
+    <!-- No -->
+    <input
+      type="text"
+      placeholder="Type here"
+      class="input input-bordered w-full max-w-xs"
+    />
+
+    <!-- Yes -->
+    <input type="checkbox" class="toggle toggle-lg" checked />
+
+    <!-- Why? -->
+    <div class="drawer drawer-end">
+      <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content">
+        <!-- Page content here -->
+        <label for="my-drawer-4" class="drawer-button btn btn-primary"
+          >Open drawer</label
+        >
+      </div>
+      <div class="drawer-side">
+        <label
+          for="my-drawer-4"
+          aria-label="close sidebar"
+          class="drawer-overlay"
+        ></label>
+        <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+          <!-- Sidebar content here -->
+          <li><a>Sidebar Item 1</a></li>
+          <li><a>Sidebar Item 2</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Who asked? I asked -->
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+      <aside>
+        <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+      </aside>
+    </footer>
+
+    <!-- Neat -->
+    <div class="mockup-browser border bg-base-300">
+      <div class="mockup-browser-toolbar">
+        <div class="input">https://daisyui.com</div>
+      </div>
+      <div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
+    </div>
+
+    <!-- Not -->
+    <div class="mockup-code">
+      <pre data-prefix="$"><code>npm i daisyui</code></pre>
+      <pre data-prefix=">" class="text-warning"><code>installing...</code></pre>
+      <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+    </div>
+
+    <!-- phone -->
+    <div class="mockup-code">
+      <pre data-prefix="$"><code>npm i daisyui</code></pre>
+      <pre data-prefix=">" class="text-warning"><code>installing...</code></pre>
+      <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+    </div>
+
+    <!-- Window -->
+    <div class="mockup-window border bg-base-300">
+      <div class="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
+    </div>
+
+    <!-- Door -->
+    <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+    <dialog id="my_modal_1" class="modal">
+      <form method="dialog" class="modal-box">
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+          <button class="btn">Close</button>
+        </div>
+      </form>
+    </dialog>
   </body>
 </html>
