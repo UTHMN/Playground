@@ -1,0 +1,17 @@
+0.0.1
+=====
+
+First version!
+For future me, this now works and has a working way to program it without
+using python directly
+
+|=======================================|
+|     Hello, welcome to pyAnimator!     |
+|                                       |
+|           CHANGELOG 0.0.1:            |
+|           - Made it work              |
+|           - Added rCircle             |
+|           - Added pat(tern)           |
+|           - Added speed               |
+|           - Added display             |
+|=======================================|

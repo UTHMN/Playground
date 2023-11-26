@@ -27,13 +27,13 @@ def rCircle(rad, font, fsize, spacing):
     t.left(90)
     print(f"Successfully performed rCircle() with a radius of {rad}")
 
-def shape(len: int, sides: int):
-    angle = (((sides - 2) * 180) / sides)
-    while not sides == 0:
+def pat(len: int, patNum: int):
+    nPat = patNum / 2
+    angle = (((nPat - 2) * 180) / nPat)
+    while not patNum == 0:
         t.right(angle)
         t.forward(len)
-        sides -= 1 
+        patNum -= 1
 
-display(True)
-# ((sides - 2) * 180) / sides
-shape(150, 6)
+def speed(s):
+    t.speed(s)
