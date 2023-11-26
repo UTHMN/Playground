@@ -6,8 +6,6 @@ global cDebug
 global mainLoop
 global lineNum
 global data
-global sDoc
-sDoc = False
 mainLoop = True
 lineNum = 0
 data = []
@@ -17,7 +15,7 @@ cDebug = True
 print(f"|=======================================|")
 print(f"|     Hello, welcome to pyAnimator!     |")
 print(f"|                                       |")
-print(f"|           CHANGELOG {version}:        |")
+print(f"|           CHANGELOG {version}:            |")
 print(f"|           - Made it work              |")
 print(f"|           - Added rCircle             |")
 print(f"|           - Added pat(tern)           |")
@@ -26,45 +24,8 @@ print(f"|           - Added display             |")
 print(f"|=======================================|")
 
 # clearing the screen
-ini = input("Action: ") 
-os.system('cls' if os.name == 'nt' else 'clear')
-
-if ini == "docs":
-    sDoc = True
-
-while sDoc:
-    docIndex = input("code to search: ")
-    
-    if docIndex == "rCircle":
-        print("")
-        print("rCircle")
-        print("Creates a circle and adds the radius of it to the center")
-        print("")
-        print("CODE: rCircle(p1,p2,p3)")
-        print("")
-        print("p1: radius of given circle")
-        print("p2: fontsize of text (radius)")
-        print("p3: spacing between circle and text (p2)")
-        print("")
-        print("Reads 3 digits of each parameter")
-        print("")
-        print("EXAMPLE:")
-        print("rCircle(150,016,010)")
-        print("")
-
-        cont = input("Search again? ")
-        if cont == "yes":
-            sDoc = True
-        else:
-            sDoc = False
-
-    if docIndex == "exit":
-        sDoc = False
-
-# Start Screen
-
-print("")
 print("Press enter to begin")
+input("")
 os.system('cls' if os.name == 'nt' else 'clear')
 
 # main code
@@ -100,8 +61,8 @@ while not cRepeat == datLen:
 
     if "rCircle" in cRun:
         print(f"Running command: {cRun}")
-        cDebug = False
-        param1 = cRun[8] + cRun[9] + cRun[10]
+        cDebug = False # rCircle(xxxx,xxx,xxx)
+        param1 = cRun[8] + cRun[9] + cRun[10] + cRun[11]
         param2 = cRun[12] + cRun[13] + cRun[14]
         param3 = cRun[16] + cRun[17] + cRun[18]
         p1 = int(param1)
@@ -111,16 +72,16 @@ while not cRepeat == datLen:
 
     if "pat" in cRun:
         print(f"Running command: {cRun}")
-        cDebug = False # pat(par1,par2)
-        param1 = cRun[5] + cRun[6] + cRun[7]
-        param2 = cRun[9] + cRun[10] + cRun[11] + cRun[12]
+        cDebug = False # pat(xxx,xxxx)
+        param1 = cRun[4] + cRun[5] + cRun[6]
+        param2 = cRun[8] + cRun[9] + cRun[10] + cRun[11]
         p1 = int(param1)
         p2 = int(param2)
         anim.pat(p1, p2)
 
     if "speed" in cRun:
         print(f"Running command: {cRun}")
-        cDebug = False # speed(10)
+        cDebug = False # speed(xx)
         param1 = cRun[6] + cRun[7]
         p1 = int(param1)
         anim.speed(p1)
@@ -132,6 +93,65 @@ while not cRepeat == datLen:
             anim.display(True)
         if "False" in cRun:
             anim.display(False)
+
+    if "left" in cRun:
+        print(f"Running command: {cRun}")
+        cDebug = False # left(xxx)
+        param1 = cRun[5] + cRun[6] + cRun[7]
+        p1 = float(param1)
+        anim.left(p1)
+
+    if "right" in cRun:
+        print(f"Running command: {cRun}")
+        cDebug = False # right(xxx)
+        param1 = cRun[6] + cRun[7] + cRun[8]
+        p1 = float(param1)
+        anim.right(p1)
+
+    if "forward" in cRun:
+        print(f"Running command: {cRun}")
+        cDebug = False # forward(xxxx)
+        param1 = cRun[8] + cRun[9] + cRun[10] + cRun[11]
+        p1 = float(param1)
+        anim.forward(p1)
+
+    if "backward" in cRun:
+        print(f"Running command: {cRun}")
+        cDebug = False # backward(xxxx)
+        param1 = cRun[9] + cRun[10] + cRun[11] + cRun[12]
+        p1 = float(param1)
+        anim.backward(p1)
+
+    if "penup" in cRun:
+        print(f"Running command: {cRun}")
+        cDebug = False
+        anim.penup(True)
+
+    if "pendown" in cRun:
+        print(f"Running command: {cRun}")
+        cDebug = False
+        anim.penup(False)
+
+    if "circle" in cRun and not "rCircle" in cRun:
+        print(f"Running command: {cRun}")
+        cDebug = False # circle(xxxx)
+        param1 = cRun[7] + cRun[8] + cRun[9] + cRun[10]
+        p1 = int(param1)
+        anim.circle(p1)
+
+    if "square" in cRun:
+        print(f"Running command: {cRun}")
+        cDebug = False # square(xxxx)
+        param1 = cRun[7] + cRun[8] + cRun[9] + cRun[10]
+        p1 = int(param1)
+        anim.square(p1)
+
+    if "hexagon" in cRun:
+        print(f"Running command: {cRun}")
+        cDebug = False # hexagon(xxxx)
+        param1 = cRun[8] + cRun[9] + cRun[10] + cRun[11]
+        p1 = int(param1)
+        anim.hexagon(p1)
 
     if cDebug:
         print(f"")

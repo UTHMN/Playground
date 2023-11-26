@@ -1,8 +1,18 @@
 Implementation:
 Done for now!
+
 Documentation:
 - pat
 - speed
 - display
+- forward
+- backward
+- penup
+- pendown
+- right
+- left
+- circle
+- square
+
 Bug patches:
 Done for now!

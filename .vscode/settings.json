@@ -3,6 +3,8 @@
         "fontsize",
         "fsize",
         "fstyle",
+        "pendown",
+        "penup",
         "Uthman"
     ]
 }
