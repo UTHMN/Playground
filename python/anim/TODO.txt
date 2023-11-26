@@ -1,0 +1,8 @@
+Implementation:
+Done for now!
+Documentation:
+- pat
+- speed
+- display
+Bug patches:
+Done for now!

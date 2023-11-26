@@ -1,0 +1,14 @@
+
+rCircle
+Creates a circle and adds the radius of it to the center
+
+CODE: rCircle(p1,p2,p3)
+
+p1: radius of given circle
+p2: fontsize of text (radius)
+p3: spacing between circle and text (p2)
+
+Reads 3 digits of each parameter
+
+EXAMPLE:
+rCircle(150,016,010)
